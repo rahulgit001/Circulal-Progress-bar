@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- LEFT -->
+    <div class="left">
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number">0%</div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width="160"
+          height="160"
+        >
+          <defs>
+            <linearGradient id="GradientColor1">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+            </linearGradient>
+          </defs>
+          <circle class="progress-65"
+            cx="80"
+            cy="80"
+            r="70"
+            fill="black"
+            stroke="url(#GradientColor1)"
+            stroke-width="10"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="center">
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="num">0%</div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width="160"
+          height="160"
+        >
+          <defs>
+            <linearGradient id="GradientColor2">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+            </linearGradient>
+          </defs>
+          <circle class="progress-75"
+            cx="80"
+            cy="80"
+            r="70"
+            fill="black"
+            stroke="url(#GradientColor2)"
+            stroke-width="10"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="numright">0%</div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width="160"
+          height="160"
+        >
+          <defs>
+            <linearGradient id="GradientColor3">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+            </linearGradient>
+          </defs>
+          <circle class="progress-60"
+            cx="80"
+            cy="80"
+            r="70"
+            fill="black"
+            stroke="url(#GradientColor3)"
+            stroke-width="10"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+      let number = document.getElementById("number");
+      let counter = 0;
+      let interval1 = setInterval(() => {
+        if (counter === 65) {
+          clearInterval(interval1);
+        } else {
+          counter++;
+          number.innerHTML = counter + "%";
+        }
+      }, 30);
+
+      let num = document.getElementById("num");
+      let count = 0;
+      let interval2 = setInterval(() => {
+        if (count === 75) {
+          clearInterval(interval2);
+        } else {
+          count++;
+          num.innerHTML = count + "%";
+        }
+      }, 38);
+
+      let numright = document.getElementById("numright");
+      let sum = 0;
+      let interval3 = setInterval(() => {
+        if (sum === 60) {
+          clearInterval(interval3);
+        } else {
+          sum++;
+          numright.innerHTML = sum + "%";
+        }
+      }, 45);
+    </script>
+  </body>
+</html>

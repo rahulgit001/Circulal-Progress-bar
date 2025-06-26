@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #e3edf7;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.skill {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow:
+    6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#number,
+#num,
+#numright {
+  font-weight: 600;
+  color: #555;
+  font-size: 22px;
+}
+
+circle {
+  fill: none;
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-65 {
+  animation: anim65 2s linear forwards;
+}
+
+.progress-75 {
+  animation: anim75 2s linear forwards;
+}
+
+.progress-60 {
+  animation: anim60 2s linear forwards;
+}
+
+@keyframes anim65 {
+  100% {
+    stroke-dashoffset: 165;
+  }
+}
+
+@keyframes anim75 {
+  100% {
+    stroke-dashoffset: 118;
+  }
+}
+
+@keyframes anim60 {
+  100% {
+    stroke-dashoffset: 188;
+  }
+}
